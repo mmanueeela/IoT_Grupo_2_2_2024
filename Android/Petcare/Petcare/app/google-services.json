@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "159374319465",
+    "firebase_url": "https://petcare-3e54a-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "petcare-3e54a",
+    "storage_bucket": "petcare-3e54a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159374319465:android:49cc45ba10161dcd0127f8",
+        "android_client_info": {
+          "package_name": "com.example.petcare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "159374319465-0k2227548o935augt0d58278qna0db3v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.petcare",
+            "certificate_hash": "3f96043287bcd8e9466def31098a2045ade370ec"
+          }
+        },
+        {
+          "client_id": "159374319465-1f5u0it40ps9cu6c7avfbilsuac4lk5o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAahW1lOIGVh8MlbRv5FXwDJD4wjzWs1pc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "159374319465-1f5u0it40ps9cu6c7avfbilsuac4lk5o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

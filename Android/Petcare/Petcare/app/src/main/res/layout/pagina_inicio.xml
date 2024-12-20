@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_inicio"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="203dp"
+        android:layout_height="219dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="-10dp"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/petcare_icono_morado" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-60dp"
+        android:fontFamily="@font/moresugar_regular"
+        android:text="Pet Care"
+        android:textColor="#C780FA"
+        android:textSize="70sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="136dp"
+        android:layout_height="158dp"
+        android:layout_marginStart="-20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/huella_morada" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-40dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Bienvenido a"
+        android:textColor="#232222"
+        android:textSize="28sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <Button
+        android:id="@+id/registro"
+        android:layout_width="179dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#FADA9D"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Registrarse"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:cornerRadius="500dp"
+        app:layout_constraintStart_toStartOf="@+id/iniciar"
+        app:layout_constraintTop_toBottomOf="@+id/iniciar"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/iniciar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#FADA9D"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Iniciar Sesión"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:cornerRadius="500dp"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

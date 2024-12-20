@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_faq">
+
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="75dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/petcare_icono_negro" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="51dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView16"
+        app:layout_constraintStart_toEndOf="@+id/imageView14"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/notifica" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="59dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lineas" />
+
+    <TextView
+        android:id="@+id/Añadir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/moresugar_regular"
+        android:text="FAQ"
+        android:textColor="#C37DFA"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+
+
+    <!-- PRIMER CUADRO -->
+
+    <TextView
+        android:id="@+id/texto1"
+        android:layout_width="381dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="El Comedero Inteligente es un dispositivo avanzado que suministra comida y agua a tus mascotas automáticamente y te permite monitorizar su consumo a través de una aplicación móvil."
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo1" />
+
+    <TextView
+        android:id="@+id/titulo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="¿Qué es el Comedero Inteligente de PetCare?"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Añadir" />
+
+    <!-- SEGUNDO CUADRO  -->
+
+    <TextView
+        android:id="@+id/texto2"
+        android:layout_width="381dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Nuestra aplicación te permite controlar el comedero desde tu teléfono, recibir alertas sobre los niveles de comida y agua, y gestionar la información de varias mascotas. Todo en un entorno fácil de usar."
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo2" />
+
+    <TextView
+        android:id="@+id/titulo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="¿Cómo funciona la aplicación de PetCare?"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texto1" />
+
+    <!-- TERCER CUADRO -->
+
+    <TextView
+        android:id="@+id/texto3"
+        android:layout_width="381dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="El Comedero Inteligente está diseñado principalmente para perros y gatos, pero puede ajustarse para otras mascotas pequeñas que requieran un control automatizado de comida y agua. "
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo3" />
+
+    <TextView
+        android:id="@+id/titulo3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="22dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="¿Qué tipo de mascotas puedo usar con el comedero?"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texto2" />
+
+    <!-- CUARTO CUADRO -->
+
+    <TextView
+        android:id="@+id/texto4"
+        android:layout_width="383dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="¡Sí! El comedero y la aplicación permiten registrar y monitorizar múltiples mascotas, por lo que puedes gestionar a todas desde la misma interfaz."
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo4" />
+
+    <TextView
+        android:id="@+id/titulo4"
+        android:layout_width="382dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="¿Puedo controlar el comedero para más de una mascota?"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texto3" />
+
+
+    <!-- QUINTO CUADRO -->
+
+    <TextView
+        android:id="@+id/texto5"
+        android:layout_width="383dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="La aplicación móvil te enviará notificaciones cuando sea necesario rellenar el comedero o el depósito de agua, o si uno de los sensores detecta algún problema."
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo5" />
+
+    <TextView
+        android:id="@+id/titulo5"
+        android:layout_width="382dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="¿Cómo recibo notificaciones sobre el estado del comedero?"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texto4" />
+
+    <!-- QUINTO CUADRO -->
+
+    <TextView
+        android:id="@+id/texto6"
+        android:layout_width="383dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Puedes contactarnos a través de nuestro formulario de contacto en la APP o enviando un correo a contacto@petcare.com."
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo6" />
+
+    <TextView
+        android:id="@+id/titulo6"
+        android:layout_width="377dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="¿Cómo puedo contactar con el equipo de PetCare?"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texto5" />
+
+    <!-- PARTE FINAL -->
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="¿Tienes más preguntas?"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/textView23"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="CONTACTANOS"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_anadecodigo">
+
+    <TextView
+        android:id="@+id/tituloanadir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="-10dp"
+        android:fontFamily="@font/moresugar_regular"
+        android:text="Pet Care"
+        android:textColor="#C780FA"
+        android:textSize="60sp"
+        app:layout_constraintStart_toStartOf="@+id/logoanadir"
+        app:layout_constraintTop_toBottomOf="@+id/logoanadir" />
+
+    <ImageView
+        android:id="@+id/logoanadir"
+        android:layout_width="95dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/petcare_icono_morado" />
+
+    <Button
+        android:id="@+id/sinncodigoboton"
+        android:layout_width="166dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="385dp"
+        android:backgroundTint="#F8D59A"
+        android:text="Comprobar código"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/textoanadecodigo"
+        app:layout_constraintTop_toBottomOf="@+id/tituloanadir" />
+
+    <ImageView
+        android:id="@+id/gatoanadir"
+        android:layout_width="169dp"
+        android:layout_height="153dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/tituloanadir"
+        app:layout_constraintTop_toBottomOf="@+id/tituloanadir"
+        app:srcCompat="@drawable/gato" />
+
+    <TextView
+        android:id="@+id/textoanadecodigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-50dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="Añade el codigo del\nsensor"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/gatoanadir"
+        app:layout_constraintTop_toBottomOf="@+id/gatoanadir" />
+
+    <EditText
+        android:id="@+id/codigosensor"
+        android:layout_width="264dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Código del sensor"
+        android:inputType="text"
+        android:textColorHint="#000000"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="@+id/textoanadecodigo"
+        app:layout_constraintTop_toBottomOf="@+id/textoanadecodigo" />
+</androidx.constraintlayout.widget.ConstraintLayout>

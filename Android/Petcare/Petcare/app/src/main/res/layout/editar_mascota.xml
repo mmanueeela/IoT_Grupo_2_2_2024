@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_anademascota">
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="91dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/petcare_icono_negro" />
+
+    <TextView
+        android:id="@+id/Añadir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/moresugar_regular"
+        android:text="Max"
+        android:textColor="#C37DFA"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="51dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView16"
+        app:layout_constraintStart_toEndOf="@+id/imageView14"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/notifica" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="59dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lineas" />
+
+    <TextView
+        android:id="@+id/horastexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Horas de la comida:"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/horas"
+        app:layout_constraintTop_toBottomOf="@+id/frecuencia" />
+
+    <TextView
+        android:id="@+id/cantidadtexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Cantidad de comida (gramos)"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/cantidad"
+        app:layout_constraintTop_toBottomOf="@+id/horas" />
+
+    <TextView
+        android:id="@+id/nombretexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Elegir nombre"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/nombre"
+        app:layout_constraintTop_toBottomOf="@+id/imageView17" />
+
+    <TextView
+        android:id="@+id/frecuenciatexto"
+        android:layout_width="265dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="8dp"
+        android:text="Elegir la frecuencia con la que come tu mascota"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/frecuencia"
+        app:layout_constraintTop_toBottomOf="@+id/nombre" />
+
+    <EditText
+        android:id="@+id/nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:background="#70F8C1FD"
+        android:backgroundTint="#F8C1FD"
+        android:ems="10"
+        android:hint="Nombre de la mascota..."
+        android:inputType="text"
+        android:textColorHint="#664FA3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.32"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombretexto" />
+
+    <EditText
+        android:id="@+id/frecuencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:background="#70F8C1FD"
+        android:backgroundTint="#F8C1FD"
+        android:ems="10"
+        android:hint="0..."
+        android:inputType="text"
+        android:textColorHint="#664FA3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.32"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frecuenciatexto" />
+
+    <EditText
+        android:id="@+id/horas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="16dp"
+        android:background="#70F8C1FD"
+        android:backgroundTint="#F8C1FD"
+        android:ems="10"
+        android:hint="8:00..."
+        android:inputType="text"
+        android:textColorHint="#664FA3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.32"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horastexto" />
+
+    <EditText
+        android:id="@+id/cantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="16dp"
+        android:background="#70F8C1FD"
+        android:backgroundTint="#F8C1FD"
+        android:ems="10"
+        android:hint="100.."
+        android:inputType="text"
+        android:textColorHint="#664FA3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cantidadtexto" />
+
+    <Button
+        android:id="@+id/yaestaa"
+        android:layout_width="148dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#F8D59A"
+        android:text="¡YA ESTA!"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cantidad" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="222dp"
+        android:layout_height="213dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Añadir"
+        app:srcCompat="@drawable/gato" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

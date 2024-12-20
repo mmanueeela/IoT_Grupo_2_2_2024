@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_formulario">
+
+
+
+    <!-- Base -->
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="75dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/petcare_icono_negro" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="51dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView16"
+        app:layout_constraintStart_toEndOf="@+id/imageView14"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/notifica" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="59dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lineas" />
+
+    <TextView
+        android:id="@+id/Añadir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/moresugar_regular"
+        android:text="Formulario de Contacto"
+        android:textColor="#C37DFA"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+
+
+
+    <!-- PRIMER CUADRO -->
+
+    <TextView
+        android:id="@+id/TituloNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="70dp"
+        android:text="Nombre y Apellidos "
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Añadir" />
+
+    <EditText
+        android:id="@+id/Nombre"
+        android:layout_width="319dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:background="#70F8C1FD"
+        android:backgroundTint="#F8C1FD"
+        android:ems="10"
+        android:hint="Nombre..."
+        android:inputType="text"
+        android:textColorHint="#664FA3"
+        app:layout_constraintStart_toStartOf="@+id/TituloNombre"
+        app:layout_constraintTop_toBottomOf="@+id/TituloNombre" />
+
+
+
+    <!-- SEGUNDO CUADRO -->
+
+    <TextView
+        android:id="@+id/TituloCorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Correo electrónico "
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/Nombre"
+        app:layout_constraintTop_toBottomOf="@+id/Nombre" />
+
+    <EditText
+        android:id="@+id/Correo"
+        android:layout_width="319dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:background="#70F8C1FD"
+        android:backgroundTint="#F8C1FD"
+        android:ems="10"
+        android:hint="Correo..."
+        android:inputType="text"
+        android:textColorHint="#664FA3"
+        app:layout_constraintStart_toStartOf="@+id/TituloCorreo"
+        app:layout_constraintTop_toBottomOf="@+id/TituloCorreo" />
+
+    <!-- TERCER CUADRO -->
+
+    <TextView
+        android:id="@+id/TituloProblema"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Cuéntanos tu problema"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/Correo"
+        app:layout_constraintTop_toBottomOf="@+id/Correo" />
+
+    <EditText
+        android:id="@+id/Problema"
+        android:layout_width="321dp"
+        android:layout_height="336dp"
+        android:layout_marginTop="8dp"
+        android:background="#70F8C1FD"
+        android:backgroundTint="#F8C1FD"
+        android:ems="10"
+        android:hint="Descripción del problema..."
+        android:inputType="text"
+        android:textColorHint="#664FA3"
+        app:layout_constraintStart_toStartOf="@+id/TituloProblema"
+        app:layout_constraintTop_toBottomOf="@+id/TituloProblema" />
+
+    <Button
+        android:id="@+id/EnviarFormulario"
+        android:layout_width="148dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#F8D59A"
+        android:text="Enviar formulario"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Problema" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
