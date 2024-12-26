@@ -1,8 +1,10 @@
 package com.example.petcare;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,6 +27,16 @@ public class RegistroActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registro);
+
+        // Encontrar el TextView por su ID
+        TextView iniciarSesionTextView = findViewById(R.id.IniciarSesion);
+
+        // Configurar el listener
+        iniciarSesionTextView.setOnClickListener(v -> {
+            // Crear un Intent para ir a IniciarSesionActivity
+            Intent intent = new Intent(RegistroActivity.this, IniciarSesionActivity.class);
+            startActivity(intent); // Iniciar la actividad
+        });
 
         // Inicializar Firebase Authentication y Firestore
         auth = FirebaseAuth.getInstance();

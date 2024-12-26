@@ -142,51 +142,19 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <ImageButton
-            android:id="@+id/imageButton3"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginBottom="5dp"
-            android:backgroundTint="#C688F8"
-            app:layout_constraintBottom_toTopOf="@+id/register"
-            app:layout_constraintEnd_toStartOf="@+id/imageButton6"
-            app:layout_constraintStart_toEndOf="@+id/imageButton4"
-            app:srcCompat="@drawable/google" />
-
-        <ImageButton
-            android:id="@+id/imageButton4"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="50dp"
-            android:backgroundTint="#C688F8"
-            app:layout_constraintBottom_toBottomOf="@+id/imageButton3"
-            app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/facebook" />
-
-        <ImageButton
-            android:id="@+id/imageButton6"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginEnd="50dp"
-            android:backgroundTint="#C688F8"
-            app:layout_constraintBottom_toBottomOf="@+id/imageButton3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/twitter" />
-
         <EditText
             android:id="@+id/contraseña"
             android:layout_width="290dp"
             android:layout_height="35dp"
-            android:layout_marginBottom="10dp"
             android:background="@drawable/textbox_redondo"
             android:ems="10"
             android:fontFamily="@font/poppins_regular"
             android:inputType="textPassword"
             android:paddingStart="30dp"
             android:textColor="#242222"
-            app:layout_constraintBottom_toTopOf="@+id/imageButton3"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="259dp" />
 
         <EditText
             android:id="@+id/apellidos"
