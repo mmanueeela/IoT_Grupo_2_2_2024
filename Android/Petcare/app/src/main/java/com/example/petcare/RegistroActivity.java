@@ -59,11 +59,12 @@ public class RegistroActivity extends AppCompatActivity {
 
             // Validar que los campos no estén vacíos
             if (nombre.isEmpty() || apellidos.isEmpty() || correo.isEmpty() || contraseña.isEmpty()) {
+                // Si algún campo está vacío, mostrar el Toast
                 Toast.makeText(RegistroActivity.this, "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show();
-                return;
+                return; // No continuar con el registro
             }
 
-            // Usar Firebase Authentication para registrar al usuario
+            // Si todos los campos están llenos, proceder con el registro
             auth.createUserWithEmailAndPassword(correo, contraseña)
                     .addOnCompleteListener(task -> {
                         if (task.isSuccessful()) {
@@ -85,7 +86,12 @@ public class RegistroActivity extends AppCompatActivity {
                                         .document(userId) // Usa el UID del usuario como el ID del documento
                                         .set(usuario)
                                         .addOnSuccessListener(aVoid -> {
+                                            // Toast para indicar que el usuario fue registrado correctamente
                                             Toast.makeText(RegistroActivity.this, "Usuario registrado con éxito", Toast.LENGTH_SHORT).show();
+
+                                            // Si el registro fue exitoso, redirigir a la actividad EscaneoActivity
+                                            Intent intent = new Intent(RegistroActivity.this, EscanearActivity.class);
+                                            startActivity(intent); // Iniciar la actividad EscaneoActivity
                                             finish(); // Finalizar la actividad actual
                                         })
                                         .addOnFailureListener(e -> {
@@ -93,6 +99,7 @@ public class RegistroActivity extends AppCompatActivity {
                                         });
                             }
                         } else {
+                            // Si el registro de Firebase falla
                             Toast.makeText(RegistroActivity.this, "Error al registrar el usuario: " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
                         }
                     });

@@ -151,13 +151,12 @@
         android:id="@+id/EnviarFormulario"
         android:layout_width="148dp"
         android:layout_height="56dp"
-        android:layout_marginTop="20dp"
         android:backgroundTint="#F8D59A"
         android:text="Enviar formulario"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Problema" />
+        app:layout_constraintTop_toBottomOf="@+id/Añadir" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

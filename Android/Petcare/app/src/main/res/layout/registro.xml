@@ -152,9 +152,9 @@
             android:inputType="textPassword"
             android:paddingStart="30dp"
             android:textColor="#242222"
+            app:layout_constraintBottom_toTopOf="@+id/register"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="259dp" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <EditText
             android:id="@+id/apellidos"

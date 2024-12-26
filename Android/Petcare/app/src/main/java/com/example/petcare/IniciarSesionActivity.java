@@ -2,9 +2,12 @@ package com.example.petcare;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,20 +15,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
-
-import android.util.Log;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.android.gms.tasks.Task;
 
 public class IniciarSesionActivity extends AppCompatActivity {
     private EditText correoField, contraseñaField;
     private Button btnIniciarSesion;
+    private TextView recuperarContraseñaTextView;
 
     private FirebaseAuth auth; // Instancia de Firebase Authentication
 
@@ -44,21 +45,25 @@ public class IniciarSesionActivity extends AppCompatActivity {
                 .build();
         googleSignInClient = GoogleSignIn.getClient(this, gso);
 
-// Inicializar Firebase Auth
+        // Inicializar Firebase Auth
         auth = FirebaseAuth.getInstance();
 
-// Configurar el botón de Google Sign-In
+        // Configurar el botón de Google Sign-In
         ImageButton googleSignInButton = findViewById(R.id.imageButton3); // El botón de tu diseño
         googleSignInButton.setOnClickListener(v -> signInWithGoogle());
-
-
-        // Inicializar Firebase Authentication
-        auth = FirebaseAuth.getInstance();
 
         // Referencias a las vistas en el layout
         correoField = findViewById(R.id.correo);
         contraseñaField = findViewById(R.id.contraseña);
         btnIniciarSesion = findViewById(R.id.login);
+        recuperarContraseñaTextView = findViewById(R.id.IniciarSesion);
+
+        // Acción para el botón de "Recuperar contraseña"
+        recuperarContraseñaTextView.setOnClickListener(v -> {
+            // Crear un Intent para iniciar la actividad de recuperación de contraseña
+            Intent intent = new Intent(IniciarSesionActivity.this, RestablecerContraseñaActivity.class);
+            startActivity(intent);  // Iniciar la actividad
+        });
 
         // Acción al presionar "Iniciar Sesión"
         btnIniciarSesion.setOnClickListener(v -> {
@@ -91,8 +96,8 @@ public class IniciarSesionActivity extends AppCompatActivity {
                                                 Toast.makeText(IniciarSesionActivity.this, "¡Bienvenid@, " + nombre + "!", Toast.LENGTH_SHORT).show();
                                             }
 
-                                            // Redirigir a "EscanearActivity"
-                                            Intent intent = new Intent(IniciarSesionActivity.this, EscanearActivity.class);
+                                            // Redirigir a "MisMascotas"
+                                            Intent intent = new Intent(IniciarSesionActivity.this, MisMascotasActivity.class);
                                             startActivity(intent);
                                             finish(); // Finalizar la actividad actual
                                         })
@@ -110,6 +115,7 @@ public class IniciarSesionActivity extends AppCompatActivity {
                     });
         });
     }
+
     private void signInWithGoogle() {
         Intent signInIntent = googleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
@@ -142,8 +148,8 @@ public class IniciarSesionActivity extends AppCompatActivity {
                         Toast.makeText(this, "Inicio de sesión con Google exitoso", Toast.LENGTH_SHORT).show();
                         FirebaseUser user = auth.getCurrentUser();
 
-                        // Redirigir al usuario a EscanearActivity
-                        Intent intent = new Intent(IniciarSesionActivity.this, EscanearActivity.class);
+                        // Redirigir al usuario a "MisMascotas"
+                        Intent intent = new Intent(IniciarSesionActivity.this, MisMascotasActivity.class);
                         startActivity(intent);
                         finish();
                     } else {
@@ -152,12 +158,4 @@ public class IniciarSesionActivity extends AppCompatActivity {
                     }
                 });
     }
-
-
 }
-/*
-              ..----.._    _
-            .' .--.    "-.(O)_
-'-.__.-'"'=:|  ,  _)_ \__ . c\'-..  <--- Pelusín
-             ''------'---''---'-"⠀⠀⠀⠀⠀⠀
- */

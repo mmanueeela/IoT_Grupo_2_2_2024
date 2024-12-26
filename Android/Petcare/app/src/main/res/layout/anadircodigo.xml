@@ -30,7 +30,7 @@
         app:srcCompat="@drawable/petcare_icono_morado" />
 
     <Button
-        android:id="@+id/sinncodigoboton"
+        android:id="@+id/sinncodigobotonIRAMISMASCOTAS"
         android:layout_width="166dp"
         android:layout_height="59dp"
         android:layout_marginStart="50dp"

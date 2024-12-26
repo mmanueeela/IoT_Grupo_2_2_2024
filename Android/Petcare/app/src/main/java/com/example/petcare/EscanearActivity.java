@@ -1,19 +1,16 @@
 package com.example.petcare;
 
-import static android.content.ContentValues.TAG;
-
 import android.Manifest;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -23,14 +20,24 @@ import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 import com.journeyapps.barcodescanner.CaptureActivity;
 
-import okhttp3.ResponseBody;
-
 public class EscanearActivity extends AppCompatActivity {
+    private Button conCodigo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.vincular_dispositivo);
+
+        conCodigo = findViewById(R.id.sinncodigobotonIRAMISMASCOTAS);
+
+        conCodigo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Redirigir a la actividad de Perfil
+                Intent intent = new Intent(EscanearActivity.this, CodigoNumerosActivity.class);
+                startActivity(intent);
+            }
+        });
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
                 != PackageManager.PERMISSION_GRANTED) {
@@ -44,7 +51,7 @@ public class EscanearActivity extends AppCompatActivity {
         // Configurar el listener
         iniciarSesionTextView.setOnClickListener(v -> {
             // Crear un Intent para ir a IniciarSesionActivity
-            Intent intent = new Intent(EscanearActivity.this, IniciarSesionActivity.class);
+            Intent intent = new Intent(EscanearActivity.this, CodigoCorrecto.class);
             startActivity(intent); // Iniciar la actividad
         });
 
@@ -72,8 +79,8 @@ public class EscanearActivity extends AppCompatActivity {
 
                 // Verificar el contenido del QR
                 if (qrContent.equalsIgnoreCase("true")) {
-                    // Redirigir a la actividad MisMascotasActivity
-                    Intent intent = new Intent(this, MisMascotasActivity.class);
+                    // Redirigir a la actividad CodigoCorrecto
+                    Intent intent = new Intent(this, CodigoCorrecto.class);
                     startActivity(intent);
                 } else {
                     // Mostrar un mensaje de error

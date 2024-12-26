@@ -33,7 +33,15 @@
         <activity android:name=".IniciarSesionActivity" />
         <activity android:name=".AcercaDeActivity" />
         <activity android:name=".MisMascotasActivity" />
+        <activity android:name=".MiperfilActivity" />
         <activity android:name=".AñadirMascotaActivity" />
+        <activity android:name=".ContactoActivity" />
+        <activity android:name=".FAQActivity" />
+        <activity android:name=".CodigoNumerosActivity" />
+        <activity android:name=".CodigoCorrecto" />
+        <activity android:name=".RestablecerContraseñaActivity" />
+        <activity android:name=".CorreoEnviadoActivity" />
+        <activity android:name=".ModificarPerfil" />
     </application>
 
 </manifest>
