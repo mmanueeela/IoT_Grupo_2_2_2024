@@ -1,144 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_editar_perfil">
+    android:background="@drawable/fondo_editar_perfil"
+    android:id="@+id/drawerLayout">
 
+    <!-- Contenedor principal -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ModificarPerfil">
 
-    <!-- Base -->
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logoEditarMiPerfil"
+            android:layout_width="75dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/petcare_icono_negro" />
 
-    <ImageView
-        android:id="@+id/logoEditarMiPerfil"
-        android:layout_width="75dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/petcare_icono_negro" />
+        <!-- Notificaciones -->
+        <ImageView
+            android:id="@+id/NotificacionesEditarMiPerfil"
+            android:layout_width="51dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="170dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/imageView16"
+            app:layout_constraintStart_toEndOf="@+id/logoEditarMiPerfil"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/notifica" />
 
-    <ImageView
-        android:id="@+id/NotificacionesEditarMiPerfil"
-        android:layout_width="51dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="170dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView16"
-        app:layout_constraintStart_toEndOf="@+id/logoEditarMiPerfil"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/notifica" />
+        <!-- Botón menú (hamburguesa) -->
+        <ImageView
+            android:id="@+id/imageView16"
+            android:layout_width="59dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/lineas" />
 
-    <ImageView
-        android:id="@+id/imageView16"
-        android:layout_width="59dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/lineas" />
+        <!-- Título del perfil -->
+        <TextView
+            android:id="@+id/Añadir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/moresugar_regular"
+            android:text="Mi perfil"
+            android:textColor="#C37DFA"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logoEditarMiPerfil" />
 
-    <TextView
-        android:id="@+id/Añadir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/moresugar_regular"
-        android:text="Mi perfil"
-        android:textColor="#C37DFA"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoEditarMiPerfil" />
+        <!-- Foto de perfil -->
+        <ImageView
+            android:id="@+id/imageView22"
+            android:layout_width="207dp"
+            android:layout_height="220dp"
+            android:layout_marginTop="74dp"
+            app:layout_constraintTop_toBottomOf="@+id/Añadir"
+            tools:layout_editor_absoluteX="101dp"
+            tools:srcCompat="@tools:sample/avatars" />
 
-    <!-- Foto -->
+        <!-- Primer cuadro: Nombre y Apellidos -->
+        <TextView
+            android:id="@+id/TituloNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="50dp"
+            android:text="Nombre y Apellidos"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView22" />
 
-    <ImageView
-        android:id="@+id/imageView22"
-        android:layout_width="207dp"
-        android:layout_height="220dp"
-        android:layout_marginTop="74dp"
-        app:layout_constraintTop_toBottomOf="@+id/Añadir"
-        tools:layout_editor_absoluteX="101dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        <EditText
+            android:id="@+id/Nombre"
+            android:layout_width="319dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:background="#70F8C1FD"
+            android:backgroundTint="#F8C1FD"
+            android:ems="10"
+            android:hint="Nombre..."
+            android:inputType="text"
+            android:textColorHint="#664FA3"
+            app:layout_constraintStart_toStartOf="@+id/TituloNombre"
+            app:layout_constraintTop_toBottomOf="@+id/TituloNombre" />
 
-    <!-- PRIMER CUADRO -->
+        <!-- Segundo cuadro: Correo electrónico -->
+        <TextView
+            android:id="@+id/TituloCorreo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
+            android:text="Cambiar Correo electrónico"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Nombre" />
 
-    <TextView
-        android:id="@+id/TituloNombre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="50dp"
-        android:text="Nombre y Apellidos"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView22" />
+        <EditText
+            android:id="@+id/Correo"
+            android:layout_width="319dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:background="#70F8C1FD"
+            android:backgroundTint="#F8C1FD"
+            android:ems="10"
+            android:hint="Correo..."
+            android:inputType="text"
+            android:textColorHint="#664FA3"
+            app:layout_constraintStart_toStartOf="@+id/TituloCorreo"
+            app:layout_constraintTop_toBottomOf="@+id/TituloCorreo" />
 
-    <EditText
-        android:id="@+id/Nombre"
-        android:layout_width="319dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
-        android:background="#70F8C1FD"
-        android:backgroundTint="#F8C1FD"
-        android:ems="10"
-        android:hint="Nombre..."
-        android:inputType="text"
-        android:textColorHint="#664FA3"
-        app:layout_constraintStart_toStartOf="@+id/TituloNombre"
-        app:layout_constraintTop_toBottomOf="@+id/TituloNombre" />
+        <!-- Botón "¡Ya Está!" -->
+        <Button
+            android:id="@+id/YaEsta"
+            android:layout_width="148dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#F8D59A"
+            android:text="¡Ya Esta!"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Correo" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- SEGUNDO CUADRO -->
+    <!-- Menú lateral -->
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="start"
+        android:background="#C780FA">
 
-    <TextView
-        android:id="@+id/TituloCorreo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="15dp"
-        android:text="Cambiar Correo electrónico"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Nombre" />
+        <!-- Opciones del menú lateral -->
+        <Button
+            android:id="@+id/menu_option_miperfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/black"
+            android:backgroundTint="#C780FA"
+            android:text="MI PERFIL" />
 
-    <EditText
-        android:id="@+id/Correo"
-        android:layout_width="319dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
-        android:background="#70F8C1FD"
-        android:backgroundTint="#F8C1FD"
-        android:ems="10"
-        android:hint="Correo..."
-        android:inputType="text"
-        android:textColorHint="#664FA3"
-        app:layout_constraintStart_toStartOf="@+id/TituloCorreo"
-        app:layout_constraintTop_toBottomOf="@+id/TituloCorreo" />
+        <Button
+            android:id="@+id/menu_option_mismascotas"
+            android:layout_width="match_parent"
+            android:backgroundTint="#C780FA"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="MIS MASCOTAS" />
 
+        <Button
+            android:id="@+id/menu_option_acercade"
+            android:layout_width="match_parent"
+            android:textColor="@color/black"
+            android:backgroundTint="#C780FA"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="ACERCA DE" />
 
-    <Button
-        android:id="@+id/YaEsta"
-        android:layout_width="148dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="#F8D59A"
-        android:text="¡Ya Esta!"
-        android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Correo" />
+        <Button
+            android:id="@+id/menu_option_contacto"
+            android:layout_width="match_parent"
+            android:backgroundTint="#C780FA"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular"
+            android:text="CONTACTO" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
-
+        <Button
+            android:id="@+id/menu_option_faq"
+            android:layout_width="match_parent"
+            android:backgroundTint="#C780FA"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular"
+            android:text="FAQ" />
+    </LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

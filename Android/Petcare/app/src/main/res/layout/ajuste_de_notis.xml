@@ -1,258 +1,308 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_amodificar">
+    android:background="@drawable/fondo_amodificar"
+    android:id="@+id/drawerLayoutAjustesNotificaciones">
 
-    <!-- Base -->
+    <!-- Contenido principal -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/logoEditarMiPerfil"
-        android:layout_width="75dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:elevation="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/petcare_icono_negro" />
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logoEditarMiPerfil"
+            android:layout_width="75dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:elevation="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/petcare_icono_negro" />
 
-    <ImageView
-        android:id="@+id/NotificacionesEditarMiPerfil"
-        android:layout_width="51dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="170dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="16dp"
-        android:elevation="10dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView16"
-        app:layout_constraintStart_toEndOf="@+id/logoEditarMiPerfil"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/notifica" />
+        <!-- Notificaciones -->
+        <ImageView
+            android:id="@+id/NotificacionesEditarMiPerfil"
+            android:layout_width="51dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="170dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:elevation="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/imageView16"
+            app:layout_constraintStart_toEndOf="@+id/logoEditarMiPerfil"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/notifica" />
 
-    <ImageView
-        android:id="@+id/imageView16"
-        android:layout_width="59dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:elevation="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/lineas" />
+        <!-- Menú lateral -->
+        <ImageView
+            android:id="@+id/imageView16"
+            android:layout_width="59dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:elevation="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/lineas" />
 
-    <TextView
-        android:id="@+id/AjustesNotis"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/moresugar_regular"
-        android:text="Ajustes de Notificaciones"
-        android:textColor="#C37DFA"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoEditarMiPerfil" />
+        <!-- Título -->
+        <TextView
+            android:id="@+id/AjustesNotis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/moresugar_regular"
+            android:text="Ajustes de Notificaciones"
+            android:textColor="#C37DFA"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logoEditarMiPerfil" />
 
+        <!-- Noti 1 -->
+        <CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="Activadas"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/AjustesNotis" />
 
-    <!-- Noti 1 -->
-    <CheckBox
-        android:id="@+id/checkBox1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:text="Activadas"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AjustesNotis" />
+        <TextView
+            android:id="@+id/noti1"
+            android:layout_width="230dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:text="las notificaciones de la Aplicación"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/checkBox1"
+            app:layout_constraintStart_toEndOf="@+id/checkBox1"
+            app:layout_constraintTop_toTopOf="@+id/checkBox1" />
 
-    <TextView
-        android:id="@+id/noti1"
-        android:layout_width="230dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
-        android:text="las notificaciones de la Aplicación"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/checkBox1"
-        app:layout_constraintStart_toEndOf="@+id/checkBox1"
-        app:layout_constraintTop_toTopOf="@+id/checkBox1" />
+        <!-- Noti 2 -->
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="Desactivados"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox1" />
 
+        <TextView
+            android:id="@+id/noti2"
+            android:layout_width="230dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:text="los sonidos de la Aplicación"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/checkBox2"
+            app:layout_constraintStart_toEndOf="@+id/checkBox2"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox1" />
 
-    <!-- Noti 2 -->
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:text="Desactivados"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox1" />
+        <!-- Noti 3 -->
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="Activadas"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
 
+        <TextView
+            android:id="@+id/noti3"
+            android:layout_width="230dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:text="las alertas para el nivel de comida"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/checkBox3"
+            app:layout_constraintStart_toEndOf="@+id/checkBox3"
+            app:layout_constraintTop_toTopOf="@+id/checkBox3" />
 
-    <!-- Noti 3 -->
+        <!-- Noti 4 -->
+        <CheckBox
+            android:id="@+id/checkBox4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="Activadas"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
 
-    <TextView
-        android:id="@+id/noti2"
-        android:layout_width="230dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
-        android:text="los sonidos de la Aplicación"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/checkBox2"
-        app:layout_constraintStart_toEndOf="@+id/checkBox2"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox1" />
+        <TextView
+            android:id="@+id/noti4"
+            android:layout_width="230dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:text="las alertas para el nivel del agua"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/checkBox4"
+            app:layout_constraintStart_toEndOf="@+id/checkBox4"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
 
-    <CheckBox
-        android:id="@+id/checkBox3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:text="Activadas"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+        <!-- Noti 5 -->
+        <CheckBox
+            android:id="@+id/checkBox5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="Activadas"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
 
+        <TextView
+            android:id="@+id/noti5"
+            android:layout_width="230dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:text="las alertas de agua"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/checkBox5"
+            app:layout_constraintStart_toEndOf="@+id/checkBox5"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
 
-    <!-- Noti 4 -->
+        <!-- Noti 6 -->
+        <CheckBox
+            android:id="@+id/checkBox6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="Desactivados"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
 
-    <TextView
-        android:id="@+id/noti3"
-        android:layout_width="230dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
-        android:text="las alertas para el nivel de comida"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/checkBox3"
-        app:layout_constraintStart_toEndOf="@+id/checkBox3"
-        app:layout_constraintTop_toTopOf="@+id/checkBox3" />
+        <TextView
+            android:id="@+id/noti6"
+            android:layout_width="230dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:text="las alertas de comida"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/checkBox6"
+            app:layout_constraintStart_toEndOf="@+id/checkBox6"
+            app:layout_constraintTop_toTopOf="@+id/checkBox6" />
 
-    <CheckBox
-        android:id="@+id/checkBox4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:text="Activadas"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
+        <!-- Noti 7 -->
+        <CheckBox
+            android:id="@+id/checkBox7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="Activadas"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox6" />
 
+        <TextView
+            android:id="@+id/noti7"
+            android:layout_width="230dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:text="las notificaciones de urgencias"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/checkBox7"
+            app:layout_constraintStart_toEndOf="@+id/checkBox7"
+            app:layout_constraintTop_toTopOf="@+id/checkBox7" />
 
-    <!-- Noti 5 -->
+        <Button
+            android:id="@+id/Modificar"
+            android:layout_width="148dp"
+            android:layout_height="56dp"
+            android:layout_marginBottom="80dp"
+            android:backgroundTint="#F8D59A"
+            android:text="Guardar"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.167"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox7"
+            app:layout_constraintVertical_bias="1.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/noti4"
-        android:layout_width="230dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
-        android:text="las alertas para el nivel del agua
-"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/checkBox4"
-        app:layout_constraintStart_toEndOf="@+id/checkBox4"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
+    <!-- Menú lateral -->
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="start"
+        android:background="#C780FA">
 
-    <CheckBox
-        android:id="@+id/checkBox5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:text="Activadas"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+        <Button
+            android:id="@+id/menu_option_miperfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/black"
+            android:backgroundTint="#C780FA"
+            android:text="MI PERFIL" />
 
+        <Button
+            android:id="@+id/menu_option_mismascotas"
+            android:layout_width="match_parent"
+            android:backgroundTint="#C780FA"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="MIS MASCOTAS" />
 
-    <!-- Noti 6 -->
+        <Button
+            android:id="@+id/menu_option_acercade"
+            android:layout_width="match_parent"
+            android:textColor="@color/black"
+            android:backgroundTint="#C780FA"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="ACERCA DE" />
 
-    <TextView
-        android:id="@+id/noti5"
-        android:layout_width="230dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
-        android:text=" las alertas de agua"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/checkBox5"
-        app:layout_constraintStart_toEndOf="@+id/checkBox5"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+        <Button
+            android:id="@+id/menu_option_contacto"
+            android:layout_width="match_parent"
+            android:backgroundTint="#C780FA"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular"
+            android:text="CONTACTO" />
 
-    <CheckBox
-        android:id="@+id/checkBox6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:text="Desactivados"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
+        <Button
+            android:id="@+id/menu_option_faq"
+            android:layout_width="match_parent"
+            android:backgroundTint="#C780FA"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular"
+            android:text="FAQ" />
 
+    </LinearLayout>
 
-    <!-- Noti 7 -->
-
-    <TextView
-        android:id="@+id/noti6"
-        android:layout_width="230dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
-        android:text="las alertas de comida"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/checkBox6"
-        app:layout_constraintStart_toEndOf="@+id/checkBox6"
-        app:layout_constraintTop_toTopOf="@+id/checkBox6" />
-
-    <CheckBox
-        android:id="@+id/checkBox7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:text="Activadas"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox6" />
-
-    <TextView
-        android:id="@+id/noti7"
-        android:layout_width="268dp"
-        android:layout_height="22dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
-        android:text="las notificaciones de horarios de alimentación"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/checkBox7"
-        app:layout_constraintStart_toEndOf="@+id/checkBox7"
-        app:layout_constraintTop_toTopOf="@+id/checkBox7" />
-
-    <Button
-        android:id="@+id/Modificar"
-        android:layout_width="148dp"
-        android:layout_height="56dp"
-        android:layout_marginBottom="80dp"
-        android:backgroundTint="#F8D59A"
-        android:text="Guardar"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.167"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox7"
-        app:layout_constraintVertical_bias="1.0" />
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

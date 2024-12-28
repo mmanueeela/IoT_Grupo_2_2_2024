@@ -24,6 +24,8 @@ public class MisMascotasActivity extends AppCompatActivity {
     private ImageView logo;
     private ImageView notificas;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +49,8 @@ public class MisMascotasActivity extends AppCompatActivity {
             Intent intent = new Intent(MisMascotasActivity.this, MisMascotasActivity.class);
             startActivity(intent);
         });
+
+
 
         // Acción al presionar las Notificas
         notificas.setOnClickListener(v -> {

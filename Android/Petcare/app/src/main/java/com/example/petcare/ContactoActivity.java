@@ -2,29 +2,49 @@ package com.example.petcare;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import androidx.core.view.GravityCompat;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 public class ContactoActivity extends AppCompatActivity {
 
-    // Declaramos las vistas
     private EditText nombreEditText, correoEditText, problemaEditText;
     private Button enviarFormularioButton;
 
     private ImageView logo;
     private ImageView notificas;
+    private ImageView menuButton;
+    private Button menuOptionMiPerfil;
+    private Button menuOptionMisMascotas;
+    private Button menuOptionAcercaDe;
+    private Button menuOptionContacto;
+    private Button menuOptionFaq;
+
+    private DrawerLayout drawerLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.formulario); // Este es el layout que creamos
 
+        // Inicializamos las vistas
+        drawerLayout = findViewById(R.id.drawerLayoutContacto);  // El ID del DrawerLayout debe coincidir con el XML
         logo = findViewById(R.id.logoContacto);
+        notificas = findViewById(R.id.NotificacionesContacto);
+        menuButton = findViewById(R.id.imageView16);  // Este es el botón para abrir el menú lateral
+        menuOptionMiPerfil = findViewById(R.id.menu_option_miperfil);
+        menuOptionMisMascotas = findViewById(R.id.menu_option_mismascotas);
+        menuOptionAcercaDe = findViewById(R.id.menu_option_acercade);
+        menuOptionContacto = findViewById(R.id.menu_option_contacto);
+        menuOptionFaq = findViewById(R.id.menu_option_faq);
+
         // Acción al presionar el Logo
         logo.setOnClickListener(v -> {
             // Redirigir al usuario a la actividad
@@ -32,49 +52,88 @@ public class ContactoActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        notificas = findViewById(R.id.NotificacionesContacto);
-        // Acción al presionar las Notificas
+        // Acción al presionar las Notificaciones
         notificas.setOnClickListener(v -> {
             // Redirigir al usuario a la actividad
             Intent intent = new Intent(ContactoActivity.this, NotificasActivity.class);
             startActivity(intent);
         });
 
+        // Acción para abrir el menú lateral
+        menuButton.setOnClickListener(v -> drawerLayout.openDrawer(GravityCompat.START));
 
-        // Inicializamos las vistas
+        menuOptionMiPerfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Redirigir a la actividad de Perfil
+                Intent intent = new Intent(ContactoActivity.this, MiperfilActivity.class);
+                startActivity(intent);
+                drawerLayout.closeDrawer(GravityCompat.START); // Cerrar el menú después de la navegación
+            }
+        });
+
+        menuOptionAcercaDe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Redirigir a la actividad de Perfil
+                Intent intent = new Intent(ContactoActivity.this, AcercaDeActivity.class);
+                startActivity(intent);
+                drawerLayout.closeDrawer(GravityCompat.START); // Cerrar el menú después de la navegación
+            }
+        });
+
+        menuOptionContacto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Redirigir a la actividad de Perfil
+                Intent intent = new Intent(ContactoActivity.this, ContactoActivity.class);
+                startActivity(intent);
+                drawerLayout.closeDrawer(GravityCompat.START); // Cerrar el menú después de la navegación
+            }
+        });
+
+        menuOptionMisMascotas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Redirigir a la actividad de Perfil
+                Intent intent = new Intent(ContactoActivity.this, MisMascotasActivity.class);
+                startActivity(intent);
+                drawerLayout.closeDrawer(GravityCompat.START); // Cerrar el menú después de la navegación
+            }
+        });
+
+        menuOptionFaq.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Redirigir a la actividad de Perfil
+                Intent intent = new Intent(ContactoActivity.this, FAQActivity.class);
+                startActivity(intent);
+                drawerLayout.closeDrawer(GravityCompat.START); // Cerrar el menú después de la navegación
+            }
+        });
+
+        // Configuramos el OnClickListener para el botón de enviar formulario
         nombreEditText = findViewById(R.id.Nombre);
         correoEditText = findViewById(R.id.Correo);
         problemaEditText = findViewById(R.id.Problema);
         enviarFormularioButton = findViewById(R.id.EnviarFormulario);
 
-        // Configuramos el OnClickListener para el botón de enviar formulario
-        enviarFormularioButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Verificamos si todos los campos están llenos
-                if (isFormComplete()) {
-                    // Si todos los campos están llenos, mostramos el toast y redirigimos
-                    Toast.makeText(ContactoActivity.this, "Formulario enviado con éxito!", Toast.LENGTH_SHORT).show();
-
-                    // Redirigimos a MisMascotasActivity
-                    Intent intent = new Intent(ContactoActivity.this, MisMascotasActivity.class);
-                    startActivity(intent);
-                    finish(); // Terminamos la actividad actual para que no se quede en el stack de actividades
-                } else {
-                    // Si algún campo está vacío, mostramos el toast de error
-                    Toast.makeText(ContactoActivity.this, "Por favor, completa todos los campos.", Toast.LENGTH_SHORT).show();
-                }
+        enviarFormularioButton.setOnClickListener(v -> {
+            if (isFormComplete()) {
+                Toast.makeText(ContactoActivity.this, "Formulario enviado con éxito!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(ContactoActivity.this, MisMascotasActivity.class);
+                startActivity(intent);
+                finish();
+            } else {
+                Toast.makeText(ContactoActivity.this, "Por favor, completa todos los campos.", Toast.LENGTH_SHORT).show();
             }
         });
     }
 
-    // Método para verificar si todos los campos están llenos
     private boolean isFormComplete() {
         String nombre = nombreEditText.getText().toString().trim();
         String correo = correoEditText.getText().toString().trim();
         String problema = problemaEditText.getText().toString().trim();
-
-        // Verificamos si alguno de los campos está vacío
         return !nombre.isEmpty() && !correo.isEmpty() && !problema.isEmpty();
     }
 }
