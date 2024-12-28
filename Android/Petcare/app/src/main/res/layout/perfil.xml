@@ -10,7 +10,7 @@
     <!-- Base -->
 
     <ImageView
-        android:id="@+id/imageView14"
+        android:id="@+id/logoEditarMiPerfil"
         android:layout_width="75dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
@@ -20,14 +20,14 @@
         app:srcCompat="@drawable/petcare_icono_negro" />
 
     <ImageView
-        android:id="@+id/imageView15"
+        android:id="@+id/NotificacionesEditarMiPerfil"
         android:layout_width="51dp"
         android:layout_height="43dp"
         android:layout_marginStart="170dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toStartOf="@+id/imageView16"
-        app:layout_constraintStart_toEndOf="@+id/imageView14"
+        app:layout_constraintStart_toEndOf="@+id/logoEditarMiPerfil"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/notifica" />
 
@@ -54,7 +54,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+        app:layout_constraintTop_toBottomOf="@+id/logoEditarMiPerfil" />
 
     <!-- Foto -->
 

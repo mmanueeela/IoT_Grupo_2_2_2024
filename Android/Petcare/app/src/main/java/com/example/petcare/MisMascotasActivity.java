@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +21,8 @@ public class MisMascotasActivity extends AppCompatActivity {
     private Button menuOptionAcercaDe;
     private Button menuOptionContacto;
     private Button menuOptionFaq;
+    private ImageView logo;
+    private ImageView notificas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,23 @@ public class MisMascotasActivity extends AppCompatActivity {
         menuOptionAcercaDe = findViewById(R.id.menu_option_acercade);
         menuOptionContacto = findViewById(R.id.menu_option_contacto);
         menuOptionFaq = findViewById(R.id.menu_option_faq);
+
+        logo = findViewById(R.id.logoMisMascotas);
+        notificas = findViewById(R.id.notificaMisMascotas);
+
+        // Acción al presionar el Logo
+        logo.setOnClickListener(v -> {
+            // Redirigir al usuario a la actividad FAQActivity
+            Intent intent = new Intent(MisMascotasActivity.this, MisMascotasActivity.class);
+            startActivity(intent);
+        });
+
+        // Acción al presionar las Notificas
+        notificas.setOnClickListener(v -> {
+            // Redirigir al usuario a la actividad FAQActivity
+            Intent intent = new Intent(MisMascotasActivity.this, NotificasActivity.class);
+            startActivity(intent);
+        });
 
         // Configurar el evento de clic para abrir el menú
         menuButton.setOnClickListener(new View.OnClickListener() {

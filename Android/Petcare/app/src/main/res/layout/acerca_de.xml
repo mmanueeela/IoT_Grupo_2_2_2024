@@ -164,7 +164,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageView8"
+            android:id="@+id/logoAcercaDe"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginStart="30dp"
@@ -174,7 +174,7 @@
             app:srcCompat="@drawable/petcare_icono_negro" />
 
         <ImageView
-            android:id="@+id/imageView9"
+            android:id="@+id/notiAcercaDe"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginEnd="20dp"

@@ -6,8 +6,37 @@
     android:layout_height="match_parent"
     android:background="@drawable/fondo_amodificar">
 
+    <TextView
+        android:id="@+id/tituloNotificaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/moresugar_regular"
+        android:text="Notificaciones"
+        android:textColor="#C780FA"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoEditarMiPerfil" />
+
+    <Button
+        android:id="@+id/btnAjustesNoti"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#FADA9D"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Ajustes de las Notificaciones"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:cornerRadius="500dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
     <ImageView
-        android:id="@+id/imageView14"
+        android:id="@+id/logoEditarMiPerfil"
         android:layout_width="91dp"
         android:layout_height="66dp"
         android:layout_marginStart="8dp"
@@ -19,14 +48,14 @@
 
 
     <ImageView
-        android:id="@+id/imageView15"
+        android:id="@+id/NotificacionesEditarMiPerfil"
         android:layout_width="51dp"
         android:layout_height="43dp"
         android:layout_marginStart="170dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toStartOf="@+id/imageView16"
-        app:layout_constraintStart_toEndOf="@+id/imageView14"
+        app:layout_constraintStart_toEndOf="@+id/logoEditarMiPerfil"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/notifica" />
 
@@ -40,6 +69,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/lineas" />
 
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="169dp"
+        android:layout_height="175dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAjustesNoti"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/gatoblanco" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

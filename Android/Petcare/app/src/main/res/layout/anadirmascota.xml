@@ -7,7 +7,7 @@
     android:background="@drawable/fondo_anademascota">
 
     <ImageView
-        android:id="@+id/imageView14"
+        android:id="@+id/logoEditarMiPerfil"
         android:layout_width="91dp"
         android:layout_height="66dp"
         android:layout_marginStart="8dp"
@@ -28,7 +28,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+        app:layout_constraintTop_toBottomOf="@+id/logoEditarMiPerfil" />
 
     <LinearLayout
         android:id="@+id/linearLayoutHoras"
@@ -138,5 +138,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Añadir"
         app:srcCompat="@drawable/gato" />
+
+    <ImageView
+        android:id="@+id/notiAnadirMascota"
+        android:layout_width="69dp"
+        android:layout_height="52dp"
+        app:layout_constraintTop_toTopOf="@+id/logoEditarMiPerfil"
+        app:srcCompat="@drawable/notifica"
+        tools:layout_editor_absoluteX="259dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

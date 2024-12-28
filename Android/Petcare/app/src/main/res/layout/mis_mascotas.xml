@@ -14,6 +14,24 @@
         tools:context=".MainActivity">
 
         <!-- El botón para añadir una mascota -->
+
+        <ImageView
+            android:id="@+id/logoMisMascotas"
+            android:layout_width="95dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/petcare_icono_negro" />
+
+        <ImageView
+            android:id="@+id/imageView24"
+            android:layout_width="179dp"
+            android:layout_height="151dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnAñadirMascota"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/gatito_gris" />
+
         <Button
             android:id="@+id/btnAñadirMascota"
             android:layout_width="210dp"
@@ -34,13 +52,21 @@
         <ImageView
             android:id="@+id/imageView16"
             android:layout_width="59dp"
-            android:layout_height="34dp"
-            android:layout_marginTop="16dp"
+            android:layout_height="54dp"
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/notificaMisMascotas"
             app:srcCompat="@drawable/lineas" />
 
+        <ImageView
+            android:id="@+id/notificaMisMascotas"
+            android:layout_width="62dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/imageView16"
+            app:layout_constraintTop_toTopOf="@+id/logoMisMascotas"
+            app:srcCompat="@drawable/notifica" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

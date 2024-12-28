@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,10 +16,30 @@ public class ContactoActivity extends AppCompatActivity {
     private EditText nombreEditText, correoEditText, problemaEditText;
     private Button enviarFormularioButton;
 
+    private ImageView logo;
+    private ImageView notificas;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.formulario); // Este es el layout que creamos
+
+        logo = findViewById(R.id.logoContacto);
+        // Acción al presionar el Logo
+        logo.setOnClickListener(v -> {
+            // Redirigir al usuario a la actividad
+            Intent intent = new Intent(ContactoActivity.this, MisMascotasActivity.class);
+            startActivity(intent);
+        });
+
+        notificas = findViewById(R.id.NotificacionesContacto);
+        // Acción al presionar las Notificas
+        notificas.setOnClickListener(v -> {
+            // Redirigir al usuario a la actividad
+            Intent intent = new Intent(ContactoActivity.this, NotificasActivity.class);
+            startActivity(intent);
+        });
+
 
         // Inicializamos las vistas
         nombreEditText = findViewById(R.id.Nombre);

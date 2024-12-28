@@ -28,20 +28,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegistroActivity" />
-        <activity android:name=".EscanearActivity" />
-        <activity android:name=".IniciarSesionActivity" />
         <activity android:name=".AcercaDeActivity" />
-        <activity android:name=".MisMascotasActivity" />
-        <activity android:name=".MiperfilActivity" />
+        <activity android:name=".AjustesNotificasActivity" />
         <activity android:name=".AñadirMascotaActivity" />
-        <activity android:name=".ContactoActivity" />
-        <activity android:name=".FAQActivity" />
-        <activity android:name=".CodigoNumerosActivity" />
         <activity android:name=".CodigoCorrecto" />
-        <activity android:name=".RestablecerContraseñaActivity" />
+        <activity android:name=".CodigoNumerosActivity" />
+        <activity android:name=".ContactoActivity" />
         <activity android:name=".CorreoEnviadoActivity" />
+        <activity android:name=".EscanearActivity" />
+        <activity android:name=".EditarMiMascotaActivity" />
+        <activity android:name=".FAQActivity" />
+        <activity android:name=".IniciarSesionActivity" />
+        <activity android:name=".MiperfilActivity" />
+        <activity android:name=".MisMascotasActivity" />
+        <activity android:name=".MiMascotaActivity" />
         <activity android:name=".ModificarPerfil" />
+        <activity android:name=".NotificasActivity" />
+        <activity android:name=".RegistroActivity" />
+        <activity android:name=".RestablecerContraseñaActivity" />
     </application>
 
 </manifest>

@@ -6,7 +6,7 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ModificarPerfil extends AppCompatActivity {
+public class AjustesNotificasActivity extends AppCompatActivity {
 
     private ImageView logo;
     private ImageView notificas;
@@ -14,22 +14,24 @@ public class ModificarPerfil extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.editar_perfil);
+        setContentView(R.layout.ajuste_de_notis); // Este es el layout donde configuramos el TextView
 
         logo = findViewById(R.id.logoEditarMiPerfil);
+        notificas = findViewById(R.id.NotificacionesEditarMiPerfil);
+
         // Acción al presionar el Logo
         logo.setOnClickListener(v -> {
             // Redirigir al usuario a la actividad
-            Intent intent = new Intent(ModificarPerfil.this, MisMascotasActivity.class);
+            Intent intent = new Intent(AjustesNotificasActivity.this, MisMascotasActivity.class);
             startActivity(intent);
         });
 
-        notificas = findViewById(R.id.NotificacionesEditarMiPerfil);
         // Acción al presionar las Notificas
         notificas.setOnClickListener(v -> {
             // Redirigir al usuario a la actividad
-            Intent intent = new Intent(ModificarPerfil.this, NotificasActivity.class);
+            Intent intent = new Intent(AjustesNotificasActivity.this, NotificasActivity.class);
             startActivity(intent);
         });
+
     }
 }
