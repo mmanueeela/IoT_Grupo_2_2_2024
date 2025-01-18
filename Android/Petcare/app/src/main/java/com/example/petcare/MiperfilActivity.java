@@ -2,12 +2,23 @@ package com.example.petcare;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MiperfilActivity extends AppCompatActivity {
 
@@ -22,10 +33,49 @@ public class MiperfilActivity extends AppCompatActivity {
     private Button menuOptionFaq;
     private Button btnModificar;
 
+    private RecyclerView recyclerView;
+    private UsuarioAdapter usuarioAdapter;
+    private List<Usuario> usuarios;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.perfil);
+
+        recyclerView = findViewById(R.id.recyclerView);
+        usuarios = new ArrayList<>();
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        // Configurar el adapter
+        usuarioAdapter = new UsuarioAdapter(usuarios);
+        recyclerView.setAdapter(usuarioAdapter);
+
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        String currentUserId = mAuth.getCurrentUser().getUid();
+
+        // Obtener los datos de Firestore
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.collection("users")
+                .whereEqualTo("userId", currentUserId)
+                .get()
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        QuerySnapshot querySnapshot = task.getResult();
+                        if (querySnapshot != null) {
+                            usuarios.clear();
+                            for (DocumentSnapshot document : querySnapshot.getDocuments()) {
+                                Usuario usuario = document.toObject(Usuario.class);
+                                usuarios.add(usuario);
+                            }
+                            usuarioAdapter.notifyDataSetChanged();
+                        }
+                    } else {
+                        Log.e("FirestoreError", "Error al obtener los usuarios", task.getException());
+                    }
+                });
+
+
 
         drawerLayout = findViewById(R.id.drawerLayout);
         menuButton = findViewById(R.id.imageView16);

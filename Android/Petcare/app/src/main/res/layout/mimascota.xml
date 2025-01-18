@@ -6,19 +6,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/fondo_mismascotas">
 
-    <TextView
-        android:id="@+id/nombreMascota"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/moresugar_regular"
-        android:text="Max"
-        android:textColor="#C780FA"
-        android:textSize="60sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoMiMascota" />
-
     <ImageView
         android:id="@+id/logoMiMascota"
         android:layout_width="50dp"
@@ -47,98 +34,17 @@
         app:layout_constraintTop_toTopOf="@+id/notiMiMascota"
         app:srcCompat="@drawable/lineas" />
 
-    <ImageView
-        android:id="@+id/imageView18"
-        android:layout_width="227dp"
-        android:layout_height="213dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombreMascota"
-        app:srcCompat="@drawable/gato" />
-
     <Button
         android:id="@+id/modificaMiMascota"
         android:layout_width="148dp"
         android:layout_height="56dp"
-        android:layout_marginTop="24dp"
         android:backgroundTint="#F8D59A"
         android:text="Modificar"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/horacomida" />
+        tools:layout_editor_absoluteY="751dp" />
 
-    <ImageView
-        android:id="@+id/imageView19"
-        android:layout_width="65dp"
-        android:layout_height="74dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="26dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/agua"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView18"
-        tools:srcCompat="@tools:sample/avatars" />
 
-    <ImageView
-        android:id="@+id/imageView20"
-        android:layout_width="62dp"
-        android:layout_height="71dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/comida"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="554dp"
-        tools:srcCompat="@tools:sample/avatars" />
 
-    <ImageView
-        android:id="@+id/imageView21"
-        android:layout_width="66dp"
-        android:layout_height="68dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/horacomida"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="656dp"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <TextView
-        android:id="@+id/agua"
-        android:layout_width="201dp"
-        android:layout_height="74dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="68dp"
-        android:text="Max tiene un 89% de agua"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView18" />
-
-    <TextView
-        android:id="@+id/comida"
-        android:layout_width="201dp"
-        android:layout_height="74dp"
-        android:layout_marginTop="26dp"
-        android:layout_marginEnd="68dp"
-        android:text="Max ha comido el 78% de su comida"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/agua" />
-
-    <TextView
-        android:id="@+id/horacomida"
-        android:layout_width="201dp"
-        android:layout_height="74dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="68dp"
-        android:text="Su próxima comida es a las 14:00"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/comida" />
 </androidx.constraintlayout.widget.ConstraintLayout>

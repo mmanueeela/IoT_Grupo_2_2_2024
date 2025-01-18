@@ -91,28 +91,6 @@
             app:layout_constraintTop_toTopOf="@+id/checkBox1" />
 
         <!-- Noti 2 -->
-        <CheckBox
-            android:id="@+id/checkBox2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:text="Desactivados"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox1" />
-
-        <TextView
-            android:id="@+id/noti2"
-            android:layout_width="230dp"
-            android:layout_height="24dp"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="8dp"
-            android:text="los sonidos de la Aplicación"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="@+id/checkBox2"
-            app:layout_constraintStart_toEndOf="@+id/checkBox2"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox1" />
 
         <!-- Noti 3 -->
         <CheckBox
@@ -124,7 +102,7 @@
             android:textColor="#000000"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+            tools:layout_editor_absoluteY="222dp" />
 
         <TextView
             android:id="@+id/noti3"
@@ -187,28 +165,6 @@
             app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
 
         <!-- Noti 6 -->
-        <CheckBox
-            android:id="@+id/checkBox6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:text="Desactivados"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
-
-        <TextView
-            android:id="@+id/noti6"
-            android:layout_width="230dp"
-            android:layout_height="24dp"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="8dp"
-            android:text="las alertas de comida"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="@+id/checkBox6"
-            app:layout_constraintStart_toEndOf="@+id/checkBox6"
-            app:layout_constraintTop_toTopOf="@+id/checkBox6" />
 
         <!-- Noti 7 -->
         <CheckBox
@@ -220,7 +176,7 @@
             android:textColor="#000000"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox6" />
+            tools:layout_editor_absoluteY="414dp" />
 
         <TextView
             android:id="@+id/noti7"
