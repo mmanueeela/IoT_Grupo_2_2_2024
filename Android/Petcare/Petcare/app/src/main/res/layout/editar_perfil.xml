@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_editar_perfil"
+    android:id="@+id/drawerLayout18">
+
+    <!-- Contenedor principal -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ModificarPerfil">
+
+        <!-- Logo -->
+
+        <!-- Notificaciones -->
+
+        <!-- Botón menú (hamburguesa) -->
+
+        <!-- Título del perfil -->
+
+        <ImageView
+            android:id="@+id/logoEditarMiPerfil"
+            android:layout_width="75dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/petcare_icono_negro" />
+
+        <TextView
+            android:id="@+id/Añadir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:fontFamily="@font/moresugar_regular"
+            android:text="Mi perfil"
+            android:textColor="#C37DFA"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logoEditarMiPerfil" />
+
+        <!-- Foto de perfil -->
+        <ImageView
+            android:id="@+id/imageView22"
+            android:layout_width="207dp"
+            android:layout_height="220dp"
+            android:layout_marginTop="64dp"
+            android:background="#F8C1FD"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Añadir"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <!-- Primer cuadro: Nombre -->
+        <TextView
+            android:id="@+id/TituloNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Nombre"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView22" />
+
+        <EditText
+            android:id="@+id/Nombre"
+            android:layout_width="319dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:background="#F8C1FD"
+            android:backgroundTint="#F8C1FD"
+            android:ems="10"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Nombre..."
+            android:inputType="text"
+            android:textColor="#000000"
+            android:textColorHint="#664FA3"
+            app:layout_constraintStart_toStartOf="@+id/TituloNombre"
+            app:layout_constraintTop_toBottomOf="@+id/TituloNombre" />
+
+        <!-- Segundo cuadro:Apellidos -->
+        <TextView
+            android:id="@+id/tituloApellidos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Apellidos"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Nombre" />
+
+        <EditText
+            android:id="@+id/Apellidos"
+            android:layout_width="319dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:background="#F8C1FD"
+            android:backgroundTint="#F8C1FD"
+            android:ems="10"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Apellidos..."
+            android:inputType="text"
+            android:textColor="#000000"
+            android:textColorHint="#664FA3"
+            app:layout_constraintStart_toStartOf="@+id/tituloApellidos"
+            app:layout_constraintTop_toBottomOf="@+id/tituloApellidos" />
+
+        <!-- Tercer cuadro: Correo electrónico -->
+
+        <TextView
+            android:id="@+id/TituloCorreo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Cambiar Correo electrónico"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Apellidos" />
+
+        <EditText
+            android:id="@+id/Correo"
+            android:layout_width="319dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:background="#F8C1FD"
+            android:backgroundTint="#F8C1FD"
+            android:ems="10"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Correo..."
+            android:inputType="text|textEmailAddress"
+            android:textColor="#000000"
+            android:textColorHint="#664FA3"
+            app:layout_constraintStart_toStartOf="@+id/TituloCorreo"
+            app:layout_constraintTop_toBottomOf="@+id/TituloCorreo" />
+
+        <!-- Botón "¡Ya Está!" -->
+        <Button
+            android:id="@+id/YaEsta"
+            android:layout_width="148dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#F8D59A"
+            android:fontFamily="@font/poppins_regular"
+            android:text="¡Ya Esta!"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Correo" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

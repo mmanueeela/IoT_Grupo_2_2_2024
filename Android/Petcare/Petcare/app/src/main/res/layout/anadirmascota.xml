@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_anademascota">
+
+    <ImageView
+        android:id="@+id/logoEditarMiPerfil"
+        android:layout_width="75dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/petcare_icono_negro" />
+
+    <TextView
+        android:id="@+id/Añadir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/moresugar_regular"
+        android:text="Añade una nueva mascota"
+        android:textColor="#C37DFA"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoEditarMiPerfil" />
+
+    <GridLayout
+        android:id="@+id/gridLayoutHoras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:columnCount="2"
+        android:orientation="horizontal"
+        android:rowCount="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frecuencia"></GridLayout>
+
+    <TextView
+        android:id="@+id/cantidadtexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Cantidad de comida (gramos)"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/cantidad"
+        app:layout_constraintTop_toBottomOf="@+id/nombre" />
+
+    <TextView
+        android:id="@+id/nombretexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-32dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Elegir nombre"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/imageView17"
+        app:layout_constraintTop_toBottomOf="@+id/imageView17" />
+
+    <TextView
+        android:id="@+id/elegir_frecuencia"
+        android:layout_width="0dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Elegir frecuencia"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/nombretexto"
+        app:layout_constraintTop_toBottomOf="@+id/cantidad" />
+
+    <Spinner
+        android:id="@+id/frecuencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#F8C1FD"
+        android:entries="@array/frecuencia_opciones"
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toStartOf="@+id/elegir_frecuencia"
+        app:layout_constraintTop_toBottomOf="@+id/elegir_frecuencia" />
+
+    <EditText
+        android:id="@+id/nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#F8C1FD"
+        android:backgroundTint="#F8C1FD"
+        android:ems="10"
+        android:fontFamily="@font/poppins_regular"
+        android:hint="Nombre de la mascota..."
+        android:inputType="text"
+        android:textColor="#000000"
+        android:textColorHint="#664FA3"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/nombretexto"
+        app:layout_constraintTop_toBottomOf="@+id/nombretexto" />
+
+    <EditText
+        android:id="@+id/cantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#F8C1FD"
+        android:backgroundTint="#F8C1FD"
+        android:ems="10"
+        android:fontFamily="@font/poppins_regular"
+        android:hint="100.."
+        android:inputType="number"
+        android:textColor="#000000"
+        android:textColorHint="#664FA3"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/nombre"
+        app:layout_constraintTop_toBottomOf="@+id/cantidadtexto" />
+
+    <Button
+        android:id="@+id/yaestaa"
+        android:layout_width="148dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#F8D59A"
+        android:text="¡YA ESTA!"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Añadir"
+        app:srcCompat="@drawable/gato" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

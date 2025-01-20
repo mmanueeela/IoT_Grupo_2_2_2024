@@ -9,8 +9,8 @@
 #define SS_PIN 5    // Pin para el SS (SDA) del RC522
 
 // Configuración de red WiFi
-const char* ssid = "Mari";       // Nombre de tu red WiFi
-const char* password = "iloveme0807";  // Contraseña de tu red WiFi
+const char* ssid = "aaaa";       // Nombre de tu red WiFi
+const char* password = "12345678";  // Contraseña de tu red WiFi
 
 AsyncUDP udp;
 MFRC522 mfrc522(SS_PIN, RST_PIN); // Crear el objeto para el RC522
