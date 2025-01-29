@@ -1,0 +1,3 @@
+cd /home/pi/Desktop/iotphyton
+source venv/bin/actívate
+python main.py
